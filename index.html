@@ -2,54 +2,132 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard Saúde - Lucineide</title>
+  <title>Dashboard Saúde - Lucineide Marques da Silva</title>
   <style>
-    body { font-family: Arial; background-color: #f4f6f9; margin: 40px; color: #333; }
-    h1 { color: #2c3e50; }
-    h2 { margin-top: 40px; color: #34495e; }
-    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
-    th { background-color: #ecf0f1; }
-    ul { margin-top: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 40px;
+      color: #2d3436;
+    }
+    h1, h2 {
+      color: #0984e3;
+      margin-top: 40px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #dfe6e9;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #dfe6e9;
+    }
+    ul {
+      margin-top: 0;
+      padding-left: 20px;
+    }
+    .bar-container {
+      background: #dfe6e9;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 25px;
+      margin: 5px 0;
+    }
+    .bar {
+      height: 100%;
+      background-color: #00cec9;
+      text-align: right;
+      padding-right: 8px;
+      color: white;
+      font-weight: bold;
+    }
+    .status-ok { color: green; font-weight: bold; }
+    .status-alerta { color: orange; font-weight: bold; }
+    .status-risco { color: red; font-weight: bold; }
   </style>
 </head>
 <body>
-  <h1>📊 Dashboard de Saúde - Lucineide</h1>
+  <h1>📊 Dashboard de Saúde - Lucineide Marques da Silva</h1>
+
+  <h2>🧪 Avaliação Clínica Geral</h2>
+  <table>
+    <tr>
+      <th>Exame</th><th>Resultado</th><th>Referência</th><th>Interpretação</th>
+    </tr>
+    <tr><td>Glicemia (jejum)</td><td>171 mg/dL</td><td>70–99</td><td class="status-risco">Diabetes</td></tr>
+    <tr><td>Hemoglobina Glicada (HbA1c)</td><td>8,9%</td><td><7,0%</td><td class="status-risco">Controle glicêmico ruim</td></tr>
+    <tr><td>HOMA-IR</td><td>8,9</td><td>Até 2,7</td><td class="status-risco">Resistência à insulina</td></tr>
+    <tr><td>LDL</td><td>145 mg/dL</td><td><130</td><td class="status-alerta">Levemente alto</td></tr>
+    <tr><td>HDL</td><td>50 mg/dL</td><td>>40</td><td class="status-ok">Bom</td></tr>
+    <tr><td>Vitamina D</td><td>28 ng/mL</td><td>>30</td><td class="status-alerta">Quase ideal</td></tr>
+    <tr><td>TGO / TGP</td><td>62 / 72 U/L</td><td>Até 32 / 33</td><td class="status-risco">Alteração hepática</td></tr>
+    <tr><td>Creatinina</td><td>0,58 mg/dL</td><td>0,5 – 0,9</td><td class="status-ok">Normal</td></tr>
+    <tr><td>Ferritina</td><td>247 ng/mL</td><td>13 – 150</td><td class="status-alerta">Alta</td></tr>
+    <tr><td>Vitamina B12</td><td>758 pg/mL</td><td>197 – 771</td><td class="status-ok">Excelente</td></tr>
+  </table>
 
   <h2>📌 Metas Mensais</h2>
   <table>
-    <tr><th>Meta</th><th>Objetivo</th><th>Prazo</th></tr>
-    <tr><td>HbA1c < 7%</td><td>Controle glicêmico</td><td>3 meses</td></tr>
-    <tr><td>LDL < 130 mg/dL</td><td>Prevenção cardíaca</td><td>2 meses</td></tr>
-    <tr><td>Vitamina D > 30</td><td>Fortalecer imunidade</td><td>2 meses</td></tr>
-    <tr><td>Normalizar TGO/TGP</td><td>Função hepática</td><td>3 meses</td></tr>
+    <tr><th>Meta</th><th>Objetivo</th><th>Status</th><th>Progresso</th></tr>
+    <tr>
+      <td>HbA1c < 7%</td>
+      <td>Controle glicêmico</td>
+      <td class="status-risco">8,9%</td>
+      <td><div class="bar-container"><div class="bar" style="width:44%;">44%</div></div></td>
+    </tr>
+    <tr>
+      <td>LDL < 130 mg/dL</td>
+      <td>Colesterol saudável</td>
+      <td class="status-alerta">145 mg/dL</td>
+      <td><div class="bar-container"><div class="bar" style="width:72%;">72%</div></div></td>
+    </tr>
+    <tr>
+      <td>Vitamina D > 30</td>
+      <td>Fortalecer imunidade</td>
+      <td class="status-alerta">28 ng/mL</td>
+      <td><div class="bar-container"><div class="bar" style="width:93%;">93%</div></div></td>
+    </tr>
+    <tr>
+      <td>Normalizar TGO/TGP</td>
+      <td>Função hepática</td>
+      <td class="status-risco">Elevado</td>
+      <td><div class="bar-container"><div class="bar" style="width:50%;">50%</div></div></td>
+    </tr>
   </table>
 
   <h2>🗓️ Cronograma Semanal</h2>
   <ul>
-    <li><strong>Segunda:</strong> Caminhada 30 min + almoço saudável</li>
-    <li><strong>Terça:</strong> Frutas com baixo índice glicêmico + Yoga</li>
-    <li><strong>Quarta:</strong> Suplemento + vegetais</li>
-    <li><strong>Quinta:</strong> Alimentação sem frituras</li>
-    <li><strong>Sexta:</strong> Revisão metas + descanso</li>
-    <li><strong>Sábado:</strong> Livre + hidratação</li>
-    <li><strong>Domingo:</strong> Preparar semana</li>
+    <li><strong>Segunda:</strong> Caminhada 30 min + almoço com vegetais frescos</li>
+    <li><strong>Terça:</strong> Frutas com baixo índice glicêmico + Yoga leve</li>
+    <li><strong>Quarta:</strong> Suplemento de Vitamina D + refeições antioxidantes</li>
+    <li><strong>Quinta:</strong> Evitar frituras + aumento de fibras</li>
+    <li><strong>Sexta:</strong> Revisão das metas + hidratação</li>
+    <li><strong>Sábado:</strong> Livre + moderação alimentar</li>
+    <li><strong>Domingo:</strong> Preparar refeições da semana</li>
   </ul>
 
   <h2>🛒 Lista de Compras</h2>
   <ul>
     <li>Aveia, chia, linhaça</li>
-    <li>Frutas: maçã, morango</li>
-    <li>Verduras e legumes</li>
-    <li>Peixes: salmão</li>
-    <li>Vitamina D3 suplemento</li>
+    <li>Frutas: maçã, morango, pera</li>
+    <li>Verduras e legumes diversos</li>
+    <li>Peixes ricos em ômega-3 (salmão, sardinha)</li>
+    <li>Oleaginosas: castanha-do-pará, nozes</li>
+    <li>Vitamina D3 (suplemento)</li>
+    <li>Adoçante natural: stevia ou xilitol</li>
   </ul>
 
   <h2>🥗 Menu Semanal</h2>
   <ul>
-    <li><strong>Café:</strong> Omelete com espinafre</li>
-    <li><strong>Almoço:</strong> Arroz integral + proteína magra</li>
+    <li><strong>Café da manhã:</strong> Omelete com espinafre ou iogurte com chia</li>
+    <li><strong>Almoço:</strong> Arroz integral + salada + frango grelhado</li>
     <li><strong>Jantar:</strong> Sopa de legumes + ovo cozido</li>
   </ul>
+
 </body>
 </html>
