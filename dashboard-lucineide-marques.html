@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Saúde - Lucineide Marques da Silva</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 20px;
+      color: #2d3436;
+      line-height: 1.6;
+    }
+    .summary {
+      background-color: #e8f4fd;
+      border-left: 5px solid #0984e3;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    h1, h2, h3 {
+      color: #0984e3;
+      margin-top: 30px;
+    }
+    h2 { border-bottom: 2px solid #dfe6e9; padding-bottom: 5px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+    th, td {
+      border: 1px solid #dfe6e9;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #dfe6e9;
+    }
+    ul {
+      padding-left: 20px;
+      list-style-type: '✅ ';
+    }
+    .bar-container {
+      background: #dfe6e9;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 25px;
+      margin: 5px 0;
+    }
+    .bar {
+      height: 100%;
+      background-color: #00cec9;
+      text-align: right;
+      padding-right: 8px;
+      color: white;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    .status-ok { color: #27ae60; font-weight: bold; }
+    .status-alerta { color: #f39c12; font-weight: bold; }
+    .status-risco { color: #c0392b; font-weight: bold; }
+    .download-btn {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background-color: #0984e3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #006ab1;
+    }
+    @media screen and (max-width: 600px) {
+      body { margin: 10px; }
+      table, th, td { font-size: 0.85em; padding: 6px; }
+      h1 { font-size: 1.5em; }
+      .download-btn { width: 100%; text-align: center; box-sizing: border-box; }
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Dashboard de Saúde - Lucineide Marques da Silva</h1>
+
+  <div class="summary">
+    <h2>Olá, Lucineide!</h2>
+    <p>Analisei seus exames e preparei este painel para que você possa visualizar sua saúde de forma clara. Temos alguns pontos de atenção importantes, como o controle da glicemia (<strong>diabetes</strong>) e a saúde do seu fígado (<strong>alteração hepática</strong>), que precisam de cuidado imediato.</p>
+    <p>A boa notícia é que seus níveis de HDL (colesterol "bom"), a função renal e os níveis de Vitamina B12 estão ótimos! Com o plano de ação que montei abaixo, vamos trabalhar juntos para melhorar seus indicadores e alcançar uma saúde plena. Estou confiante na sua evolução.</p>
+  </div>
+
+  <a class="download-btn" href="https://github.com/nettaskjr/paineldesaude-lucy/blob/main/2746821_67410.53725.31888.71241942.pdf" target="_blank">📎 Baixar Resultado do Exame (PDF)</a>
+
+  <h2>🧪 Avaliação Clínica Geral</h2>
+  <table>
+    <tr><th>Exame</th><th>Resultado</th><th>Referência</th><th>Interpretação</th></tr>
+    <tr><td>Glicemia</td><td>171 mg/dL</td><td>70–99</td><td class="status-risco">Diabetes</td></tr>
+    <tr><td>HbA1c</td><td>8,9%</td><td>&lt;7,0%</td><td class="status-risco">Controle ruim</td></tr>
+    <tr><td>HOMA-IR</td><td>8,9</td><td>Até 2,7</td><td class="status-risco">Resistência à insulina</td></tr>
+    <tr><td>LDL</td><td>145 mg/dL</td><td>&lt;130</td><td class="status-alerta">Levemente alto</td></tr>
+    <tr><td>HDL</td><td>50 mg/dL</td><td>&gt;40</td><td class="status-ok">Bom</td></tr>
+    <tr><td>Vitamina D</td><td>28 ng/mL</td><td>&gt;30</td><td class="status-alerta">Quase ideal</td></tr>
+    <tr><td>TGO / TGP</td><td>62 / 72</td><td>Até 32 / 33</td><td class="status-risco">Alteração hepática</td></tr>
+    <tr><td>Creatinina</td><td>0,58 mg/dL</td><td>0,5 – 0,9</td><td class="status-ok">Normal</td></tr>
+    <tr><td>Ferritina</td><td>247 ng/mL</td><td>13 – 150</td><td class="status-alerta">Alta</td></tr>
+    <tr><td>Vitamina B12</td><td>758 pg/mL</td><td>197 – 771</td><td class="status-ok">Excelente</td></tr>
+  </table>
+
+  <h2>📌 Metas Mensais</h2>
+  <table>
+    <tr><th>Meta</th><th>Objetivo</th><th>Status Atual</th><th>Progresso</th></tr>
+    <tr><td>HbA1c &lt; 7%</td><td>Controle glicêmico</td><td class="status-risco">8,9%</td><td><div class="bar-container"><div class="bar" style="width:44%;">44%</div></div></td></tr>
+    <tr><td>LDL &lt; 130 mg/dL</td><td>Colesterol saudável</td><td class="status-alerta">145 mg/dL</td><td><div class="bar-container"><div class="bar" style="width:72%;">72%</div></div></td></tr>
+    <tr><td>Vitamina D &gt; 30</td><td>Fortalecer imunidade</td><td class="status-alerta">28 ng/mL</td><td><div class="bar-container"><div class="bar" style="width:93%;">93%</div></div></td></tr>
+    <tr><td>Normalizar TGO/TGP</td><td>Função hepática</td><td class="status-risco">Elevado</td><td><div class="bar-container"><div class="bar" style="width:50%;">50%</div></div></td></tr>
+  </table>
+
+  <h2>⭐ Plano de Ação Detalhado</h2>
+  <h3>🗓️ Cronograma Semanal</h3>
+  <ul>
+    <li><strong>Segunda:</strong> Caminhada 30 min + almoço com vegetais frescos.</li>
+    <li><strong>Terça:</strong> Frutas com baixo índice glicêmico (ex: morango) + Yoga leve.</li>
+    <li><strong>Quarta:</strong> Suplemento de Vitamina D + refeições antioxidantes.</li>
+    <li><strong>Quinta:</strong> Evitar frituras e industrializados + aumentar consumo de fibras.</li>
+    <li><strong>Sexta:</strong> Revisão das metas + hidratação constante (mínimo 2L de água).</li>
+    <li><strong>Sábado:</strong> Refeição livre com moderação + atividade física prazerosa.</li>
+    <li><strong>Domingo:</strong> Preparar refeições e lanches saudáveis para a semana.</li>
+  </ul>
+
+  <h3>🛒 Lista de Compras Sugerida</h3>
+  <ul>
+    <li><strong>Fibras:</strong> Aveia, chia, linhaça.</li>
+    <li><strong>Frutas (baixo IG):</strong> Maçã, morango, pera, mirtilo.</li>
+    <li><strong>Verduras e Legumes:</strong> Folhas verdes, brócolis, couve-flor, tomate, cenoura.</li>
+    <li><strong>Proteínas Magras:</strong> Peixes (salmão, sardinha), frango sem pele, ovos.</li>
+    <li><strong>Gorduras Boas:</strong> Oleaginosas (castanha-do-pará, nozes), azeite de oliva extra virgem.</li>
+    <li><strong>Suplementos:</strong> Vitamina D3 (conforme prescrição).</li>
+    <li><strong>Outros:</strong> Adoçante natural (stevia ou xilitol), iogurte natural.</li>
+  </ul>
+
+  <h3>🥗 Sugestão de Menu Semanal</h3>
+  <ul>
+    <li><strong>Café da manhã:</strong> Omelete com espinafre e tomate ou Iogurte natural integral com aveia, chia e morangos.</li>
+    <li><strong>Almoço:</strong> Salada colorida + Filé de frango grelhado ou salmão + 2 colheres de sopa de arroz integral.</li>
+    <li><strong>Lanche da Tarde:</strong> Mix de castanhas (um punhado) ou uma maçã.</li>
+    <li><strong>Jantar:</strong> Sopa de legumes com pedaços de carne magra ou Salada completa com ovo cozido e atum.</li>
+  </ul>
+
+  <h2>🤔 Dúvidas para a Próxima Consulta</h2>
+  <ul style="list-style-type: '❓ ';">
+    <li>Quais são os efeitos colaterais esperados das medicações para diabetes?</li>
+    <li>A alteração no fígado (TGO/TGP) pode ser revertida apenas com dieta e exercício?</li>
+    <li>Preciso fazer algum exame de imagem para o fígado, como um ultrassom?</li>
+    <li>Com que frequência devo repetir os exames de sangue para acompanhar a evolução?</li>
+  </ul>
+</body>
+</html>
