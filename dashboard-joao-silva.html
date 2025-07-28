@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Saúde - João da Silva</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 20px;
+      color: #2d3436;
+      line-height: 1.6;
+    }
+    .summary {
+      background-color: #e8f4fd;
+      border-left: 5px solid #0984e3;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    h1, h2, h3 {
+      color: #0984e3;
+      margin-top: 30px;
+    }
+    h2 { border-bottom: 2px solid #dfe6e9; padding-bottom: 5px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+    th, td {
+      border: 1px solid #dfe6e9;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #dfe6e9;
+    }
+    ul {
+      padding-left: 20px;
+      list-style-type: '✅ ';
+    }
+    .bar-container {
+      background: #dfe6e9;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 25px;
+      margin: 5px 0;
+    }
+    .bar {
+      height: 100%;
+      background-color: #00cec9;
+      text-align: right;
+      padding-right: 8px;
+      color: white;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    .status-ok { color: #27ae60; font-weight: bold; }
+    .status-alerta { color: #f39c12; font-weight: bold; }
+    .status-risco { color: #c0392b; font-weight: bold; }
+    .download-btn {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 12px 20px;
+      background-color: #0984e3;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .download-btn:hover {
+      background-color: #006ab1;
+    }
+    @media screen and (max-width: 600px) {
+      body { margin: 10px; }
+      table, th, td { font-size: 0.85em; padding: 6px; }
+      h1 { font-size: 1.5em; }
+      .download-btn { width: 100%; text-align: center; box-sizing: border-box; }
+    }
+  </style>
+</head>
+<body>
+  <h1>📊 Dashboard de Saúde - João da Silva</h1>
+
+  <div class="summary">
+    <h2>Olá, João!</h2>
+    <p>Analisei seus exames e preparei este painel para você. O foco principal será o controle do seu colesterol, pois o <strong>LDL está elevado</strong> e o <strong>HDL está um pouco baixo</strong>. Isso representa um risco cardiovascular que precisamos manejar.</p>
+    <p>Por outro lado, seu controle glicêmico está excelente e a maioria dos outros marcadores está dentro da normalidade. Com as mudanças no estilo de vida e na alimentação que detalhei abaixo, vamos melhorar seu perfil de colesterol e proteger sua saúde. Conte comigo!</p>
+  </div>
+
+  <a class="download-btn" href="#" target="_blank">📎 Baixar Resultado do Exame (PDF)</a>
+
+  <h2>🧪 Avaliação Clínica Geral</h2>
+  <table>
+    <tr><th>Exame</th><th>Resultado</th><th>Referência</th><th>Interpretação</th></tr>
+    <tr><td>Glicemia</td><td>95 mg/dL</td><td>70–99</td><td class="status-ok">Normal</td></tr>
+    <tr><td>HbA1c</td><td>5,5%</td><td>&lt;5,7%</td><td class="status-ok">Normal</td></tr>
+    <tr><td>LDL</td><td>180 mg/dL</td><td>
