@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Saúde - Lucy - 23/05/2024</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3, h4 {
+            color: #0056b3;
+            margin-top: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #004085;
+        }
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #0069d9;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        thead th {
+            background-color: #0056b3;
+            color: #fff;
+            font-weight: bold;
+        }
+        tbody tr:nth-of-type(even) {
+            background-color: #f8f9fa;
+        }
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 15px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+            min-width: 80px;
+        }
+        .status-bom { background-color: #28a745; }
+        .status-atencao { background-color: #ffc107; color: #333; }
+        .status-melhorar { background-color: #dc3545; }
+        ul {
+            list-style-type: '✓ ';
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .signature {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Plano de Saúde Personalizado de Lucy</h1>
+        <p>Olá, Lucy! Como seu médico, analisei cuidadosamente todos os seus resultados. Quero parabenizá-la por tomar a iniciativa de fazer um check-up completo – este é o passo mais importante para uma vida longa e saudável.</p>
+        <p>A boa notícia é que temos um panorama muito claro da sua saúde atual. Há pontos excelentes e outros que merecem nossa atenção e cuidado. A melhor parte é que todos os pontos de atenção são reversíveis com as mudanças certas no estilo de vida.</p>
+
+        <h2>Dashboard da Sua Saúde Atual</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Seu Resultado</th>
+                    <th>Referência Ideal</th>
+                    <th>Status</th>
+                    <th>Avaliação Rápida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Glicemia de Jejum</strong></td>
+                    <td>108 mg/dL</td>
+                    <td>&lt; 100 mg/dL</td>
+                    <td><span class="status-badge status-atencao">Atenção</span></td>
+                    <td>Levemente elevada, indica risco de pré-diabetes.</td>
+                </tr>
+                <tr>
+                    <td><strong>Hemoglobina Glicada</strong></td>
+                    <td>5.9%</td>
+                    <td>&lt; 5.7%</td>
+                    <td><span class="status-badge status-atencao">Atenção</span></td>
+                    <td>Confirma o estado de pré-diabetes.</td>
+                </tr>
+                <tr>
+                    <td><strong>Colesterol LDL (Ruim)</strong></td>
+                    <td>155 mg/dL</td>
+                    <td>&lt; 100 mg/dL</td>
+                    <td><span class="status-badge status-melhorar">Melhorar</span></td>
+                    <td>Alto, aumentando o risco cardiovascular.</td>
+                </tr>
+                <tr>
+                    <td><strong>Colesterol HDL (Bom)</strong></td>
+                    <td>52 mg/dL</td>
+                    <td>&gt; 40 mg/dL</td>
+                    <td><span class="status-badge status-bom">Bom</span></td>
+                    <td>Nível protetor, excelente!</td>
+                </tr>
+                <tr>
+                    <td><strong>Triglicerídeos</strong></td>
+                    <td>190 mg/dL</td>
+                    <td>&lt; 150 mg/dL</td>
+                    <td><span class="status-badge status-melhorar">Melhorar</span></td>
+                    <td>Elevado, associado a dieta e risco cardíaco.</td>
+                </tr>
+                <tr>
+                    <td><strong>Vitamina D</strong></td>
+                    <td>18 ng/mL</td>
+                    <td>&gt; 30 ng/mL</td>
+                    <td><span class="status-badge status-melhorar">Melhorar</span></td>
+                    <td>Deficiência que precisa de suplementação.</td>
+                </tr>
+                <tr>
+                    <td><strong>TGP/ALT (Fígado)</strong></td>
+                    <td>55 U/L</td>
+                    <td>&lt; 40 U/L</td>
+                    <td><span class="status-badge status-atencao">Atenção</span></td>
+                    <td>Leve alteração, sugere sobrecarga hepática (gordura).</td>
+                </tr>
+                <tr>
+                    <td><strong>Função Renal (Ureia/Creatinina)</strong></td>
+                    <td>Normal</td>
+                    <td>Dentro do Padrão</td>
+                    <td><span class="status-badge status-bom">Bom</span></td>
+                    <td>Seus rins estão funcionando perfeitamente.</td>
+                </tr>
+                <tr>
+                    <td><strong>Densitometria Óssea</strong></td>
+                    <td>T-score: -0.5</td>
+                    <td>&gt; -1.0</td>
+                    <td><span class="status-badge status-bom">Bom</span></td>
+                    <td>Densidade óssea excelente para a idade.</td>
+                </tr>
+                <tr>
+                    <td><strong>Hemograma Completo</strong></td>
+                    <td>Normal</td>
+                    <td>Dentro do Padrão</td>
+                    <td><span class="status-badge status-bom">Bom</span></td>
+                    <td>Sem sinais de anemia ou infecções.</td>
+                </tr>
+                <tr>
+                    <td><strong>Pressão Arterial</strong></td>
+                    <td>125/80 mmHg</td>
+                    <td>&lt; 130/85 mmHg</td>
+                    <td><span class="status-badge status-bom">Bom</span></td>
+                    <td>Níveis ótimos de pressão arterial.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Análise Detalhada e Explicação</h2>
+        <h3>🟢 Pontos Positivos (O que está ótimo!)</h3>
+        <p><strong>Saúde Óssea e Renal:</strong> Sua densitometria óssea está excelente! Isso significa que seus ossos estão fortes e densos. Da mesma forma, seus exames de função renal mostram que seus rins estão filtrando o sangue de maneira muito eficiente.</p>
+        <p><strong>Colesterol HDL "Bom":</strong> Seu nível de HDL está em uma faixa protetora. Pense no HDL como o "caminhão de lixo" do corpo, que remove o excesso de colesterol das artérias.</p>
+        <p><strong>Hemograma e Pressão Arterial:</strong> Você não apresenta sinais de anemia e suas células de defesa estão normais. Sua pressão arterial também está em um nível ótimo.</p>
+
+        <h3>🔴 Pontos de Atenção (Onde vamos focar)</h3>
+        <p><strong>Metabolismo da Glicose (Pré-Diabetes):</strong> Sua glicemia e hemoglobina glicada estão na faixa de pré-diabetes. É um sinal de alerta de que seu corpo está com dificuldade em processar o açúcar (resistência à insulina). É totalmente reversível nesta fase.</p>
+        <p><strong>Colesterol e Triglicerídeos (Dislipidemia):</strong> Seu colesterol LDL ("ruim") e seus triglicerídeos estão altos, aumentando o risco cardiovascular a longo prazo. Isso geralmente está ligado ao consumo de carboidratos simples e gorduras ruins.</p>
+        <p><strong>Saúde do Fígado:</strong> A leve elevação da enzima TGP/ALT sugere "fígado gorduroso" (esteatose hepática), um acúmulo de gordura no fígado ligado à resistência à insulina. Também é reversível.</p>
+        <p><strong>Deficiência de Vitamina D:</strong> Sua vitamina D está baixa. Ela é crucial para a saúde dos ossos, sistema imunológico e humor. A suplementação é essencial.</p>
+
+        <h2>Plano de Ação: Rumo à Saúde Plena</h2>
+        <h3>Metas para os Próximos 3 Meses:</h3>
+        <ul>
+            <li><strong>Metabolismo:</strong> Reduzir a Hemoglobina Glicada para abaixo de 5.7%.</li>
+            <li><strong>Colesterol:</strong> Reduzir o LDL em pelo menos 20% e os Triglicerídeos para abaixo de 150 mg/dL.</li>
+            <li><strong>Vitaminas:</strong> Aumentar o nível de Vitamina D para acima de 30 ng/mL.</li>
+            <li><strong>Bem-estar:</strong> Perder de 3 a 5 kg de peso corporal, focando na gordura abdominal.</li>
+        </ul>
+
+        <h3>Cronograma Semanal de Hábitos</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Alimentação (Foco)</th>
+                    <th>Atividade Física (Sugestão)</th>
+                    <th>Suplementação e Cuidados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Segunda</strong></td>
+                    <td>Iniciar a semana sem açúcar e farinha branca.</td>
+                    <td>Caminhada rápida ou corrida leve (30-40 min).</td>
+                    <td>Vitamina D (após café da manhã). Beber 2L de água.</td>
+                </tr>
+                <tr>
+                    <td><strong>Terça</strong></td>
+                    <td>Foco em proteínas magras (peixe, frango) e saladas.</td>
+                    <td>Treino de força (musculação, funcional).</td>
+                    <td>Ômega 3 (se recomendado).</td>
+                </tr>
+                <tr>
+                    <td><strong>Quarta</strong></td>
+                    <td>Dia de gorduras boas (abacate, castanhas, azeite).</td>
+                    <td>Descanso ativo: Alongamento ou Yoga (20 min).</td>
+                    <td>Vitamina D.</td>
+                </tr>
+                <tr>
+                    <td><strong>Quinta</strong></td>
+                    <td>Aumentar a ingestão de fibras (aveia, legumes).</td>
+                    <td>Caminhada rápida com subidas ou bicicleta (40 min).</td>
+                    <td>Ômega 3 (se recomendado).</td>
+                </tr>
+                <tr>
+                    <td><strong>Sexta</strong></td>
+                    <td>Refeição livre planejada (sem exageros).</td>
+                    <td>Treino de força (musculação, funcional).</td>
+                    <td>Vitamina D.</td>
+                </tr>
+                <tr>
+                    <td><strong>Sábado</strong></td>
+                    <td>Manter o plano, mesmo no fim de semana.</td>
+                    <td>Atividade ao ar livre: Trilha, pedalar (60 min).</td>
+                    <td>Ômega 3 (se recomendado).</td>
+                </tr>
+                <tr>
+                    <td><strong>Domingo</strong></td>
+                    <td>Preparar as refeições da semana.</td>
+                    <td>Descanso ou caminhada leve (30 min).</td>
+                    <td>Vitamina D.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Sugestão de Menu Semanal</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Refeição</th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Café da Manhã</strong></td>
+                    <td>Ovos mexidos com tomate + 1/2 mamão</td>
+                    <td>Iogurte natural com aveia e morangos</td>
+                    <td>Vitamina de abacate com chia</td>
+                    <td>Crepioca com queijo branco</td>
+                    <td>Repetir o que mais gostou</td>
+                </tr>
+                <tr>
+                    <td><strong>Almoço</strong></td>
+                    <td>Frango grelhado, arroz integral, brócolis</td>
+                    <td>Salmão assado, purê de batata doce, salada</td>
+                    <td>Carne moída com legumes, quinoa</td>
+                    <td>Strogonoff fit, arroz integral</td>
+                    <td>Bife acebolado, feijão, couve refogada</td>
+                </tr>
+                <tr>
+                    <td><strong>Jantar</strong></td>
+                    <td>Sopa de legumes com frango</td>
+                    <td>Omelete com cogumelos + salada</td>
+                    <td>Salada completa com atum e ovos</td>
+                    <td>Abobrinha recheada com carne moída</td>
+                    <td>Sanduíche no pão integral</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Lista de Compras para o Sucesso</h2>
+        <h3>Hortifrúti</h3>
+        <ul>
+            <li>Verduras: Alface, rúcula, espinafre, brócolis, couve, couve-flor.</li>
+            <li>Legumes: Tomate, pepino, cenoura, abobrinha, cebola, alho.</li>
+            <li>Frutas: Mamão, morango, abacate, maçã, laranja, limão.</li>
+        </ul>
+        <h3>Proteínas</h3>
+        <ul>
+            <li>Ovos, filé de frango, peixes (salmão, tilápia), carne bovina magra.</li>
+            <li>Iogurte natural integral (sem açúcar), queijo branco.</li>
+        </ul>
+        <h3>Grãos e Gorduras Boas</h3>
+        <ul>
+            <li>Arroz integral, aveia, quinoa, feijão.</li>
+            <li>Azeite de oliva extravirgem, castanhas, sementes de chia.</li>
+        </ul>
+
+        <div class="signature">
+            <p>Estou muito otimista com nosso plano. Seus resultados mostram um corpo que está pedindo uma mudança de rota, e você tem total capacidade de fazer isso acontecer.</p>
+            <p><strong>Dr. Gemini Code Assist</strong><br><em>Clínica Geral e Medicina Preventiva</em></p>
+        </div>
+    </div>
+
+</body>
+</html>
